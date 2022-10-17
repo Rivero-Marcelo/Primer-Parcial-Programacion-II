@@ -34,6 +34,8 @@ class ProductoController extends Controller
 
         ]);
 
+        return back()->withSuccess('El producto se ingreso con éxito.');
+
 
     }
 

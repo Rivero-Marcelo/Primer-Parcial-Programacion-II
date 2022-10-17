@@ -13,17 +13,16 @@
 
 <form action={{route('producto.store')}} method="post">
     @csrf
-<b>Creado por: {{auth()->user()->name }} {{auth()->user()->apellido}} </b> <br>
-<b>E-mail:</b> {{auth()->user()->email}} <br>
-<b> Fecha:</b> {{date('d-m-Y')}} 
-<br><br>
 
-<b>Titulo:</b> <br><input type="text" name="titulo" size="49"><br><br>
-
-<textarea name="cuerpo" rows="15" cols="50"></textarea><br><br>
+<b>Nombre:</b> <br><input type="text" name="nombre"><br><br>
+<b>Marca:</b> <br><input type="text" name="marca"><br><br>
+<b>Descripcion:</b> <br><input type="text" name="descripcion"><br><br>
+<b>Stock:</b> <br><input type="text" name="stock"><br><br>
 
 
-<input type="submit" value="Publicar">
+
+
+<input type="submit" value="Alta">
 
 </form>
 

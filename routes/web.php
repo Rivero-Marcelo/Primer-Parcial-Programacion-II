@@ -15,9 +15,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 
 Route::get('producto/alta', [ProductoController::class, 'create'])->name('producto.create');
 Route::post('producto/alta', [ProductoController::class, 'store'])->name('producto.store');
+
+Route::get('home', function(){
+    return view('home');
+} )->name('home');
+
+
