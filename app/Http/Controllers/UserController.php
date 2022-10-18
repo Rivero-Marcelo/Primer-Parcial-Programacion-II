@@ -34,7 +34,7 @@ class UserController extends Controller
             
         ]);
 
-        //Auth::login($user);
+    
         return back()->withSuccess('Usuario creado con éxito');
     }
 

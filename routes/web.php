@@ -18,18 +18,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
 });
 
 
 
-Route::get('usuario/alta', [UserController::class, 'create'])->name('usuario.create');
-Route::post('usuario/alta', [UserController::class, 'store'])->name('usuario.store');
+Route::get('/usuario/alta', [UserController::class, 'create'])->name('usuario.create');
+Route::post('/usuario/alta', [UserController::class, 'store'])->name('usuario.store');
 
 Route::get('/login', [LogController::class, 'index'])->name('login');
 Route::post('/login', [LogController::class, 'autenticar'])->name('autenticar');
 
-Route::get('/logout', [LogController::class, 'logout'])->name('logout');
+
+
+
 
 
 
@@ -40,10 +42,13 @@ Route::middleware([Autenticar::class])->group(function(){
         return view('home');
     } )->name('home');
 
-    Route::get('producto/alta', [ProductoController::class, 'create'])->name('producto.create');
-    Route::post('producto/alta', [ProductoController::class, 'store'])->name('producto.store');
+
+    Route::get('/producto/alta', [ProductoController::class, 'create'])->name('producto.create');
+    Route::post('/producto/alta', [ProductoController::class, 'store'])->name('producto.store');
+    
     Route::get('producto/listado', [ProductoController::class, 'showAll'])->name('producto.showAll');
     Route::get('producto/eliminar/{id}', [ProductoController::class, 'destroy'])->name('producto.destroy');
+    Route::get('/logout', [LogController::class, 'logout'])->name('logout');
 
 });
 

@@ -34,7 +34,7 @@
 
     
     <br>
-<a href={{route('home')}}>Volver</a>
+<a href={{route('login')}}>Volver</a>
     
 </body>
 </html>

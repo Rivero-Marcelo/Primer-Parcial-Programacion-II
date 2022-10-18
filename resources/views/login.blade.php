@@ -17,6 +17,9 @@
 
     <br>
 
+    <div><a href={{route('usuario.create')}}>Crear Usuario</a></div>    
+    </div>
+
     @if(session()->has('error_login'))
     <div style="color: red;">{{session()->get('error_login')}}</div>
     @endif
