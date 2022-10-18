@@ -17,7 +17,7 @@ class ProductoTest extends TestCase
      * @return void
      */
     
-    //use RefreshDatabase;
+    use RefreshDatabase;
   
 
     public function test_crearProducto()
@@ -41,8 +41,7 @@ class ProductoTest extends TestCase
             'descripcion' => 'una descripcion',
             'stock' => 12
         ]);
-
-        
+  
          
     }
 
@@ -56,9 +55,6 @@ class ProductoTest extends TestCase
         $response->assertSessionHas('success', 'Producto eliminado.');
 
     }
-
-
-
 
 
 

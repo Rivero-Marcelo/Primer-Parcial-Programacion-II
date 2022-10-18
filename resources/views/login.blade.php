@@ -7,10 +7,11 @@
     <title>LOGIN</title>
 </head>
 <body>
+    <br>INICIO DE SESION<br><br>
 
     <div><form  action= {{ route('login') }}    method="post">
         @csrf
-        Usuario  <input type="text" name="email"> Contraseña 
+        Email  <input type="text" name="email"> Contraseña 
         <input type="password" name="password">  
         <input type="submit" value="Iniciar Sesión"></form><br>
     </div>
@@ -19,6 +20,7 @@
 
     <div><a href={{route('usuario.create')}}>Crear Usuario</a></div>    
     </div>
+    <br><br>
 
     @if(session()->has('error_login'))
     <div style="color: red;">{{session()->get('error_login')}}</div>

@@ -9,10 +9,14 @@ class LogController extends Controller
 {
 
     public function index(){
+
+        if(Auth::check()){
+            return redirect()->route('home');
+        }
+
         
         return view('login');
     }
-
 
 
     public function autenticar(Request $request) {
