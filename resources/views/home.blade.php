@@ -11,10 +11,15 @@
     
     <h2 align="center">SUPERMERCADO - MENU DE OPCIONES - PAGINA PRINCIPAL</h2><br>
 
+   
+
 
     <div>
         <a href={{route('producto.create')}}>Alta de Producto</a><br><br>
         <a href={{route('producto.showAll')}}>Listado de Productos</a>
+
+        <br><br><br><br>
+        <div><a href={{route('logout')}}>Cerrar Sesión</a></div><br>
     </div>
 
     

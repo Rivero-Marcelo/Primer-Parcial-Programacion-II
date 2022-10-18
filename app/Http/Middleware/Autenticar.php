@@ -20,6 +20,6 @@ class Autenticar
         if(Auth::user())
         return $next($request);
         
-    return redirect('/');
+    return redirect('/login');
     }
 }

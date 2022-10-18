@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LogController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\Autenticar;
@@ -24,6 +25,11 @@ Route::get('/', function () {
 
 Route::get('usuario/alta', [UserController::class, 'create'])->name('usuario.create');
 Route::post('usuario/alta', [UserController::class, 'store'])->name('usuario.store');
+
+Route::get('/login', [LogController::class, 'index'])->name('login');
+Route::post('/login', [LogController::class, 'autenticar'])->name('autenticar');
+
+Route::get('/logout', [LogController::class, 'logout'])->name('logout');
 
 
 
