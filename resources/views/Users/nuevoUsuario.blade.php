@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>NUEVO USUARIO</h1>
-<form action={{route('usuario.create')}} method="post">
+<form action={{route('usuario.store')}} method="post">
     @csrf
 
     Nombre <input type="text" name="name"> <br />

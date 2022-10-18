@@ -28,6 +28,7 @@ Route::get('producto/listado', [ProductoController::class, 'showAll'])->name('pr
 Route::get('producto/eliminar/{id}', [ProductoController::class, 'destroy'])->name('producto.destroy');
 
 Route::get('usuario/alta', [UserController::class, 'create'])->name('usuario.create');
+Route::post('usuario/alta', [UserController::class, 'store'])->name('usuario.store');
 
 
 
