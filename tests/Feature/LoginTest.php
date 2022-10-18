@@ -12,7 +12,7 @@ use Illuminate\Support\Str;
 
 class LoginTest extends TestCase
 {
-  //  use RefreshDatabase;
+    use RefreshDatabase;
     /**
      * A basic feature test example.
      *

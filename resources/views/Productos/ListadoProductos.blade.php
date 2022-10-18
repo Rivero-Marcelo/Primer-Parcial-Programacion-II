@@ -17,6 +17,7 @@
             <b>Marca:</b> {{$producto->marca}}  
             <b>Descripcion:</b> {{$producto->descripcion}}
             <b>Stock:</b> {{$producto->stock}}
+            @method('delete')
             <a href={{route('producto.destroy', ['id' => $producto->id])}}>Eliminar</a>
 
             <br><br>
