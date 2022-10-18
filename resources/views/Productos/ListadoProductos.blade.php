@@ -23,6 +23,17 @@
             
     @endforeach
 
+    @if(session('success'))
+    <div style="color: red;">{{session('success')}}</div><br>
+    @endif
+
+
+
+    <a href={{route('home')}}>Volver</a>
+
+
+
+
     
 </body>
 </html>

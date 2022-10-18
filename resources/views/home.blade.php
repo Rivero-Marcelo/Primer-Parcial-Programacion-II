@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <h2>MENU</h2>
+    <h2>SUPERMERCADO - MENU DE OPCIONES -</h2>
 
     <div>
         <a href={{route('producto.create')}}>Alta de Producto</a><br><br>
