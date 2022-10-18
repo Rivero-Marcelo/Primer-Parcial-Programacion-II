@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,6 +26,9 @@ Route::post('producto/alta', [ProductoController::class, 'store'])->name('produc
 Route::get('producto/listado', [ProductoController::class, 'showAll'])->name('producto.showAll');
 
 Route::get('producto/eliminar/{id}', [ProductoController::class, 'destroy'])->name('producto.destroy');
+
+Route::get('usuario/alta', [UserController::class, 'create'])->name('usuario.create');
+
 
 
 Route::get('home', function(){
