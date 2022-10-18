@@ -19,9 +19,6 @@
 <b>Descripcion:</b> <br><input type="text" name="descripcion"><br><br>
 <b>Stock:</b> <br><input type="text" name="stock"><br><br>
 
-
-
-
 <input type="submit" value="Alta">
 
 </form>

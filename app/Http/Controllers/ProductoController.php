@@ -42,6 +42,21 @@ class ProductoController extends Controller
 
 
     public function destroy($id){
+
+        $producto = Producto::findOrFail($id);
+        $producto->delete();
+
+        return back()->withSuccess('Producto eliminado.');
+
+ 
+    }
+
+
+    public function showAll(){
+
+        $productos = Producto::all();
+
+        return view('Productos/ListadoProductos', ['productos' => $productos]);
         
     }
 

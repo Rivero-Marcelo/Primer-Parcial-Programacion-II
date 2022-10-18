@@ -22,6 +22,11 @@ Route::get('/', function () {
 Route::get('producto/alta', [ProductoController::class, 'create'])->name('producto.create');
 Route::post('producto/alta', [ProductoController::class, 'store'])->name('producto.store');
 
+Route::get('producto/listado', [ProductoController::class, 'showAll'])->name('producto.showAll');
+
+Route::get('producto/eliminar/{id}', [ProductoController::class, 'destroy'])->name('producto.destroy');
+
+
 Route::get('home', function(){
     return view('home');
 } )->name('home');
